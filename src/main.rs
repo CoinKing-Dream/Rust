@@ -46,5 +46,11 @@ fn main(){
 
     }
 
+    const Number: i32 = 20;
+    const Floating_Number: f32 = 20.0;
+
+    println!("{}", Number);
+    println!("{}", Floating_Number);
+
 
 }

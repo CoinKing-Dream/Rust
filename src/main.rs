@@ -2,6 +2,14 @@ use rand::Rng;
 use std::env;
 
 fn main(){
+    // previous();
+    // loop_statement();
+    // ----- now coding ------
+    tuple_type();
+
+}
+
+fn previous() {
     let day = String::from("Welcome");
     let random_number = rand::thread_rng().gen_range(1..=10);
     println!("Generate Random Number 1 and 10: {}", random_number);
@@ -76,14 +84,26 @@ fn main(){
     };
     
     println!("{}", add(12, 25));
+}
 
-    // let employ: (u32, &str, bool) = (1, "john", true);
+fn loop_statement() {
+    let mut number = 0;
 
-    // let args: Vec<String> = env::args().collect();
+    loop {
+        number = number + 1;
+        if number == 9 {
+            break;
+        }
 
-    // let name = &args[1];
-    // let filename = &args[2];
+        println!("{}", number);
+    }
+}
 
-    // println!("Name is {}", name);
+fn tuple_type() {
+    let em: (u32, &str) = (1, "John");
+
+    println!("{:#?}", em);
+    println!("{}", em.0);
+    println!("{:#?}", em.1);
 }
 
